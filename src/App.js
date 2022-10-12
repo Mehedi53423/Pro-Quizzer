@@ -1,23 +1,41 @@
-import { Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
+import Main from "./layout/Main";
 import Blog from "./components/Blog";
 import Error from "./components/Error";
 import Home from "./components/Home";
-import Navbar from "./components/Navbar";
 import Statistics from "./components/Statistics";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Main></Main>,
+      children: [
+        {
+          path: "/",
+          loader: async () => {
+            return fetch("https://openapi.programming-hero.com/api/quiz");
+          },
+          element: <Home></Home>,
+        },
+        {
+          path: "/Home",
+          loader: async () => {
+            return fetch("https://openapi.programming-hero.com/api/quiz");
+          },
+          element: <Home></Home>,
+        },
+        { path: "/Statistics", element: <Statistics></Statistics> },
+        { path: "/Blog", element: <Blog></Blog> },
+        { path: "*", element: <Error></Error> },
+      ],
+    },
+  ]);
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/Statistics" element={<Statistics />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </>
+    <div>
+      <RouterProvider router={router}></RouterProvider>
+    </div>
   );
 }
 
