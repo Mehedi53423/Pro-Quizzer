@@ -4,24 +4,32 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Questions = (props) => {
   const { question, correctAnswer, options } = props.question;
+
   const [show, setShow] = useState(false);
-  const activeClassName = "text-lg font-semibold text-center mt-10";
-  const notActiveClassName = "text-lg font-semibold text-center mt-10 hidden";
+  const [clicked, setclicked] = useState(false);
+
+  const activeClassName = "text-lg font-semibold mt-10 flex justify-center";
+  const notActiveClassName = "hidden";
+
   const showButton = () => {
     show ? setShow(false) : setShow(true);
   };
-  const Correct = () => {
+  const correct = () => {
     toast.success("Correct Answer");
   };
-  const Wrong = () => {
+  const wrong = () => {
     toast.error("Wrong Answer");
   };
 
   const checkAns = (ans) => {
     if (ans === correctAnswer) {
-      Correct();
+      correct();
+      setclicked(true);
+      props.correctAns();
     } else {
-      Wrong();
+      wrong();
+      setclicked(true);
+      props.wrongAns();
     }
   };
   return (
@@ -67,33 +75,25 @@ const Questions = (props) => {
         </button>
       </div>
       <h1 className="font-bold text-xl text-center">
-        Question :{props.number} : {question}
+        Question No. {props.number} : {question}
       </h1>
       <h1 className="text-lg font-semibold grid grid-rows-2 grid-flow-col gap-2 mt-10">
         {options.map((option) => (
           <button
             className="border-2 hover:border-indigo-400 p-2 m-2 rounded-lg hover:bg-indigo-400 hover:text-white"
+            disabled={clicked ? true : false}
             onClick={() => checkAns(option)}
           >
             {option}
           </button>
         ))}
       </h1>
-      <h1 className={show ? activeClassName : notActiveClassName}>
-        Correct Answer : {correctAnswer}
-      </h1>
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+      <div className={show ? activeClassName : notActiveClassName}>
+        <h1 className="w-1/3 text-center border-2 p-2 rounded-lg">
+          Correct Answer :{" "}
+          <span className="text-green-400">{correctAnswer}</span>
+        </h1>
+      </div>
       <ToastContainer
         position="bottom-right"
         autoClose={5000}
