@@ -20,7 +20,7 @@ const Quiz = () => {
   };
   return (
     <div>
-      <div className="flex justify-center items-center mt-5 bg-slate-100 p-5 container mx-auto rounded-2xl shadow-2xl">
+      <div className="flex justify-center items-center mt-5 bg-slate-200 p-5 container mx-auto rounded-2xl shadow-xl">
         <img src={logo} alt="Logo" className="h-40" />
         <div>
           <h1 className="font-bold text-2xl pl-5">{name} Quiz</h1>

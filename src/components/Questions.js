@@ -33,7 +33,7 @@ const Questions = (props) => {
     }
   };
   return (
-    <div className="container mx-auto bg-slate-100 p-10 m-5 rounded-2xl shadow-2xl">
+    <div className="container mx-auto bg-slate-200 p-10 m-5 rounded-2xl shadow-xl">
       <div className="text-right">
         <button onClick={showButton}>
           {show ? (
@@ -80,7 +80,7 @@ const Questions = (props) => {
       <h1 className="text-lg font-semibold grid grid-rows-2 grid-flow-col gap-2 mt-10">
         {options.map((option) => (
           <button
-            className="border-2 hover:border-indigo-400 p-2 m-2 rounded-lg hover:bg-indigo-400 hover:text-white"
+            className="border-2 border-black hover:border-indigo-400 p-2 m-2 rounded-lg hover:bg-indigo-400 hover:text-white"
             disabled={clicked ? true : false}
             onClick={() => checkAns(option)}
           >
@@ -89,7 +89,7 @@ const Questions = (props) => {
         ))}
       </h1>
       <div className={show ? activeClassName : notActiveClassName}>
-        <h1 className="w-1/3 text-center border-2 p-2 rounded-lg">
+        <h1 className="w-1/3 text-center border-2 p-2 rounded-lg border-black">
           Correct Answer :{" "}
           <span className="text-green-400">{correctAnswer}</span>
         </h1>

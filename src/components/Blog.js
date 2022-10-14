@@ -3,11 +3,11 @@ import React from "react";
 const Blog = () => {
   return (
     <div className="container mx-auto">
-      <h1 className="bg-slate-100 p-5 text-center rounded-2xl shadow-2xl text-xl font-bold my-5">
+      <h1 className="bg-slate-200 p-5 text-center rounded-2xl shadow-xl text-xl font-bold my-5">
         Questions
       </h1>
       <div className="grid grid-rows-1 grid-flow-row gap-5">
-        <article className="bg-slate-100 p-5 rounded-2xl shadow-2xl">
+        <article className="bg-slate-200 p-5 rounded-2xl shadow-xl">
           <h1 className="text-center font-bold text-xl">
             What is the purpose of react router?
           </h1>
@@ -19,7 +19,7 @@ const Blog = () => {
             user will be redirected to that particular route.
           </p>
         </article>
-        <article className="bg-slate-100 p-5 rounded-2xl shadow-2xl">
+        <article className="bg-slate-200 p-5 rounded-2xl shadow-xl">
           <h1 className="text-center font-bold text-xl">
             How does context API works?
           </h1>
@@ -31,7 +31,7 @@ const Blog = () => {
             lighter approach to state management using Redux.
           </p>
         </article>
-        <article className="bg-slate-100 p-5 rounded-2xl shadow-2xl mb-5">
+        <article className="bg-slate-200 p-5 rounded-2xl shadow-xl mb-5">
           <h1 className="text-center font-bold text-xl">
             What is useRef hook?
           </h1>

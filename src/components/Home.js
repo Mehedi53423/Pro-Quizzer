@@ -2,16 +2,20 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import QuizTopics from "./QuizTopics";
 import Test from "../assets/Test.png";
+import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
   const data = useLoaderData();
   const quizTopics = data.data;
+
   return (
     <div>
-      <div className="flex justify-center items-center bg-slate-100 container mx-auto rounded-2xl shadow-2xl mt-10">
-        <img src={Test} alt="Test" className="h-96" />
-        <div>
-          <h1 className="font-bold text-4xl flex justify-center items-center">
+      <div className="flex items-center bg-slate-200 container mx-auto rounded-2xl shadow-xl mt-10">
+        <div className="w-1/2 flex justify-end">
+          <img src={Test} alt="Test" className="h-96" />
+        </div>
+        <div className="w-1/2">
+          <h1 className="font-bold text-4xl flex justify-start items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -28,8 +32,14 @@ const Home = () => {
             </svg>
             Test Your Self
           </h1>
-          <p className="font-bold text-xl">
-            Test Your Web Development Skills Here
+          <p className="font-bold text-xl mt-3">
+            <TypeAnimation
+              sequence={["Test Your Web Development Skills Here", 2000, " "]}
+              wrapper="div"
+              cursor={true}
+              repeat={Infinity}
+              speed={300}
+            />
           </p>
         </div>
       </div>

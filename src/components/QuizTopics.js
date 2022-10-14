@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const QuizTopics = ({ quizTopic }) => {
   const { name, logo, total, id } = quizTopic;
   return (
-    <div className="shadow-2xl rounded-2xl p-5 bg-slate-100 transform transition duration-500 hover:scale-110">
+    <div className="shadow-xl rounded-2xl p-5 bg-slate-200 transform transition duration-500 hover:scale-110">
       <h1 className="text-center font-bold text-xl pb-2">{name}</h1>
       <img src={logo} alt="Logo" />
       <div className="flex justify-between mt-2">
