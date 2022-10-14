@@ -10,9 +10,9 @@ const Quiz = () => {
   let n = 1;
   return (
     <div>
-      <div className="flex justify-center items-center mt-5">
+      <div className="flex justify-center items-center mt-5 bg-slate-100 p-5 container mx-auto rounded-2xl shadow-2xl">
         <img src={logo} alt="Logo" className="h-40" />
-        <h1 className="font-bold text-2xl pl-5">{name}</h1>
+        <h1 className="font-bold text-2xl pl-5">{name} Quiz</h1>
       </div>
       {console.log(quiz)}
       {questions.map((question) => (
