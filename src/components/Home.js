@@ -15,7 +15,7 @@ const Home = () => {
           <img src={Test} alt="Test" className="h-96" />
         </div>
         <div className="w-1/2">
-          <h1 className="font-bold text-4xl flex justify-start items-center">
+          <h1 className="font-bold text-4xl flex justify-start items-center font-merienda">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -32,7 +32,7 @@ const Home = () => {
             </svg>
             Test Your Self
           </h1>
-          <p className="font-bold text-xl mt-3">
+          <p className="font-bold text-xl mt-3 font-merienda">
             <TypeAnimation
               sequence={["Test Your Web Development Skills Here", 2000, " "]}
               wrapper="div"

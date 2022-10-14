@@ -1,4 +1,5 @@
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 import errorNotFound from "../assets/ErrorNotFound.png";
 
 const Error = () => {
@@ -9,10 +10,18 @@ const Error = () => {
         alt="404 Error Not Found"
         className="w-1/4 h-96 mx-auto"
       />
-      <h1 className="text-center font-bold text-6xl text-red-400 mb-5">
+      <h1 className="text-center font-bold text-6xl text-red-400 mb-5 font-merienda">
         Error
       </h1>
-      <h1 className="text-center font-bold text-4xl mb-10">Not Found</h1>
+      <h1 className="text-center font-bold text-4xl mb-10 font-merienda">
+        <TypeAnimation
+          sequence={["Not Found", 2000, " "]}
+          wrapper="h1"
+          cursor={true}
+          repeat={Infinity}
+          speed={300}
+        />
+      </h1>
     </div>
   );
 };
