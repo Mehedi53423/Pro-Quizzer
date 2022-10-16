@@ -10,19 +10,19 @@ const Home = () => {
 
   return (
     <div>
-      <div className="flex items-center bg-slate-200 container mx-auto rounded-2xl shadow-xl mt-10">
-        <div className="w-1/2 flex justify-end">
+      <div className="flex flex-col md:flex-row items-center bg-slate-200 container mx-auto rounded-2xl shadow-xl mt-10">
+        <div className="md:w-1/2 flex md:justify-end">
           <img src={Test} alt="Test" className="h-96" />
         </div>
-        <div className="md:w-1/2">
-          <h1 className="font-bold text-4xl md:flex justify-start items-center font-merienda">
+        <div className="md:w-1/2 w-4/5 pb-4 md:pb-0 h-64 md:h-auto">
+          <h1 className="font-bold text-4xl md:flex md:justify-start md:text-left text-center justify-center items-center font-merienda">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              className="w-14 h-14"
+              className="w-14 h-14 mx-auto md:mx-0"
             >
               <path
                 stroke-linecap="round"
@@ -32,7 +32,7 @@ const Home = () => {
             </svg>
             Test Your Self
           </h1>
-          <p className="font-bold text-xl mt-3 font-merienda">
+          <p className="font-bold text-xl mt-3 font-merienda text-center md:text-left">
             <TypeAnimation
               sequence={["Test Your Web Development Skills Here", 2000, " "]}
               wrapper="div"
