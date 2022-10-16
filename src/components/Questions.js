@@ -10,9 +10,9 @@ const Questions = (props) => {
 
   const activeClassName = "text-lg font-semibold mt-10 flex justify-center";
   const notActiveClassName = "hidden";
-  const clickedBtn = "border-2 border-black p-2 m-2 rounded-lg";
+  const clickedBtn = "border-2 border-black md:p-2 md:m-2 rounded-lg";
   const notClickedBtn =
-    "border-2 border-black hover:border-indigo-400 p-2 m-2 rounded-lg hover:bg-indigo-400 hover:text-white";
+    "border-2 border-black hover:border-indigo-400 md:p-2 md:m-2 rounded-lg hover:bg-indigo-400 hover:text-white";
 
   const showButton = () => {
     show ? setShow(false) : setShow(true);
@@ -36,7 +36,7 @@ const Questions = (props) => {
     }
   };
   return (
-    <div className="container mx-auto bg-slate-200 p-10 m-5 rounded-2xl shadow-xl">
+    <div className="container mx-auto bg-slate-200 md:p-10 p-2 m-5 rounded-2xl shadow-xl">
       <div className="text-right">
         <button onClick={showButton}>
           {show ? (
@@ -81,7 +81,7 @@ const Questions = (props) => {
         Question No. {props.number} : {question}{" "}
         {clicked ? (
           <div className="text-indigo-400 flex justify-center mt-5">
-            <h1 className="w-1/6 py-2 border-2 border-black rounded-lg">
+            <h1 className="md:w-1/6 py-2 px-2 border-2 border-black rounded-lg">
               Answered
             </h1>
           </div>
@@ -101,7 +101,7 @@ const Questions = (props) => {
         ))}
       </h1>
       <div className={show ? activeClassName : notActiveClassName}>
-        <h1 className="w-1/3 text-center border-2 p-2 rounded-lg border-black">
+        <h1 className="md:w-1/3 text-center border-2 p-2 rounded-lg border-black">
           Correct Answer :{" "}
           <span className="text-green-400">{correctAnswer}</span>
         </h1>
