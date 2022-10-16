@@ -40,7 +40,9 @@ const Statistics = () => {
   ];
   return (
     <div className="container mx-auto bg-slate-200 my-10 rounded-2xl shadow-xl pt-10 pb-5">
-      <h1 className="text-center font-bold text-2xl mb-5">Statistics</h1>
+      <h1 className="text-center font-bold text-2xl mb-5 text-indigo-400">
+        Statistics
+      </h1>
       <div className="flex justify-center">
         <LineChart
           width={600}

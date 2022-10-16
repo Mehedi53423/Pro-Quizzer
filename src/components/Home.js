@@ -11,11 +11,11 @@ const Home = () => {
   return (
     <div>
       <div className="flex items-center bg-slate-200 container mx-auto rounded-2xl shadow-xl mt-10">
-        <div className="w-1/2 flex justify-end">
+        <div className="md:w-1/2 md:flex justify-end">
           <img src={Test} alt="Test" className="h-96" />
         </div>
-        <div className="w-1/2">
-          <h1 className="font-bold text-4xl flex justify-start items-center font-merienda">
+        <div className="md:w-1/2">
+          <h1 className="font-bold text-4xl md:flex justify-start items-center font-merienda">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

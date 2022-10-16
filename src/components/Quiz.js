@@ -32,7 +32,6 @@ const Quiz = () => {
           </h1>
         </div>
       </div>
-      {console.log(quiz)}
       {questions.map((question) => (
         <Questions
           key={question.id}

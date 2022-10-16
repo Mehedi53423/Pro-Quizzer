@@ -10,6 +10,9 @@ const Questions = (props) => {
 
   const activeClassName = "text-lg font-semibold mt-10 flex justify-center";
   const notActiveClassName = "hidden";
+  const clickedBtn = "border-2 border-black p-2 m-2 rounded-lg";
+  const notClickedBtn =
+    "border-2 border-black hover:border-indigo-400 p-2 m-2 rounded-lg hover:bg-indigo-400 hover:text-white";
 
   const showButton = () => {
     show ? setShow(false) : setShow(true);
@@ -75,12 +78,21 @@ const Questions = (props) => {
         </button>
       </div>
       <h1 className="font-bold text-xl text-center">
-        Question No. {props.number} : {question}
+        Question No. {props.number} : {question}{" "}
+        {clicked ? (
+          <div className="text-indigo-400 flex justify-center mt-5">
+            <h1 className="w-1/6 py-2 border-2 border-black rounded-lg">
+              Answered
+            </h1>
+          </div>
+        ) : (
+          <></>
+        )}
       </h1>
-      <h1 className="text-lg font-semibold grid grid-rows-2 grid-flow-col gap-2 mt-10">
+      <h1 className="text-lg font-semibold grid grid-rows-2 grid-flow-col gap-2 mt-5">
         {options.map((option) => (
           <button
-            className="border-2 border-black hover:border-indigo-400 p-2 m-2 rounded-lg hover:bg-indigo-400 hover:text-white"
+            className={clicked ? clickedBtn : notClickedBtn}
             disabled={clicked ? true : false}
             onClick={() => checkAns(option)}
           >
