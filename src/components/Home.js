@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div>
       <div className="flex items-center bg-slate-200 container mx-auto rounded-2xl shadow-xl mt-10">
-        <div className="md:w-1/2 md:flex justify-end">
+        <div className="w-1/2 flex justify-end">
           <img src={Test} alt="Test" className="h-96" />
         </div>
         <div className="md:w-1/2">

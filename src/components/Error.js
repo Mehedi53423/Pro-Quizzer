@@ -8,7 +8,7 @@ const Error = () => {
       <img
         src={errorNotFound}
         alt="404 Error Not Found"
-        className="w-1/4 h-96 mx-auto"
+        className="md:w-1/4 h-96 mx-auto"
       />
       <h1 className="text-center font-bold text-6xl text-red-400 mb-5 font-merienda">
         Error
